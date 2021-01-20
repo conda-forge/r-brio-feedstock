@@ -1,4 +1,4 @@
-{% set version = '1.1.0' %}
+{% set version = "1.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brio_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brio/brio_{{ version }}.tar.gz
-  sha256: 6bb3a3b47bea13f1a1e3dcdc8b9f688502643e4b40a481a34aa04a261aabea38
+  sha256: 70fa42423fc2ef8ec5ef91ca2d6ed3a1c79200d650774133c821cc5f38be222a
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,12 +42,10 @@ test:
 about:
   home: https://github.com/r-lib/brio
   license: MIT
-  summary: Functions to handle basic input output, these functions always read and write UTF-8
-    (8-bit Unicode Transformation Format) files and provide more explicit control over
-    line endings.
+  summary: Functions to handle basic input output, these functions always read and write UTF-8 (8-bit Unicode Transformation Format) files and provide more explicit control over line endings.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
