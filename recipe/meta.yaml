@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/brio_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/brio/brio_{{ version }}.tar.gz
-  sha256: 70fa42423fc2ef8ec5ef91ca2d6ed3a1c79200d650774133c821cc5f38be222a
+  sha256: 42dde6953151e31cc38bbec72335c01ac9e755cc07d11e26f4e1fcd0f9f471ef
 
 build:
   merge_build_host: true  # [win]
